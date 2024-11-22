@@ -10,7 +10,7 @@ spec:
  source:
    repoURL: https://github.com/rghdrizzle/Trying-argocd-public.git
    targetRevision: HEAD
-   path: environments/staging/first-app
+   path: app/environments/staging/first-app
  destination:
    server: https://kubernetes.default.svc
  syncPolicy:
