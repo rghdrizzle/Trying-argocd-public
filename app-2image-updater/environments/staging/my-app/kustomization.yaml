@@ -1,0 +1,7 @@
+---
+namespace: staging
+replicas:
+  - name: app
+    count: 2
+resources:
+  - ../../../app-base
