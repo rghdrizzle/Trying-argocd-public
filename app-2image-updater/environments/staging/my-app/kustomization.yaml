@@ -3,5 +3,8 @@ namespace: staging
 replicas:
   - name: app
     count: 2
+images:
+  - name: rghdrizzle/weathertrakrfrontend:v2.0
+  - newTag: v2.0.1
 resources:
   - ../../../app-base
