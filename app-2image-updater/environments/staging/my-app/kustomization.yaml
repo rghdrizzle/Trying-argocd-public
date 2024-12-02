@@ -4,7 +4,7 @@ replicas:
   - name: app
     count: 2
 images:
-  - name: rghdrizzle/weathertrakrfrontend:v2.0
+  - name: rghdrizzle/weathertrakrfrontend:v2
   - newTag: v2.0.1
 resources:
   - ../../../app-base
