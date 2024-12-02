@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: rghdrizzle/weathertrakrfrontend:v2
+        image: rghdrizzle/weathertrakrfrontend
         resources:
           limits:
             memory: "128Mi"
