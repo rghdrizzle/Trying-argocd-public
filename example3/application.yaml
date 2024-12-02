@@ -1,0 +1,25 @@
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: app-updater
+  namespace: default
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+ project: default
+ source:
+   repoURL: https://github.com/rghdrizzle/Trying-argocd-public.git
+   targetRevision: main
+   path: app-2image-updater/enviornments/staging/my-app
+ destination:
+   server: https://kubernetes.default.svc
+ syncPolicy:
+   automated:
+     prune: true
+     selfHeal: true
+     allowEmpty: false
+   syncOptions:
+     - Validate=true
+     - CreateNameSpace=false
+     - PrunePropagationPolicy=foreground
+     - PruneLast=true
